@@ -1,0 +1,43 @@
+.genre-selector h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 32px;
+  font-size: 24px;
+}
+
+.genre-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.genre-card {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s ease;
+}
+
+.genre-card:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.genre-icon {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.genre-name {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.genre-description {
+  font-size: 14px;
+  opacity: 0.9;
+}

@@ -1,0 +1,40 @@
+.turn-counter {
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.turn-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.turn-label {
+  font-size: 14px;
+  color: #666;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.turn-numbers {
+  font-size: 18px;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.5s ease;
+  border-radius: 4px;
+}

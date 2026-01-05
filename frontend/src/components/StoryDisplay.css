@@ -1,0 +1,40 @@
+.story-display {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 24px;
+  min-height: 200px;
+  overflow-y: auto;
+}
+
+.story-content {
+  line-height: 1.8;
+  color: #333;
+}
+
+.story-paragraph {
+  margin-bottom: 16px;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.story-paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.story-display::-webkit-scrollbar {
+  width: 8px;
+}
+
+.story-display::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+
+.story-display::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 4px;
+}
+
+.story-display::-webkit-scrollbar-thumb:hover {
+  background: #764ba2;
+}

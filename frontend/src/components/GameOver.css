@@ -1,0 +1,45 @@
+.game-over {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.game-over-content {
+  text-align: center;
+  animation: fadeIn 0.6s ease-in;
+}
+
+.game-over-icon {
+  font-size: 80px;
+  margin-bottom: 24px;
+  animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.game-over h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.game-over p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 32px;
+}
+
+.restart-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 18px;
+  padding: 16px 40px;
+}
