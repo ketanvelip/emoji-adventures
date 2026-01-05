@@ -1,11 +1,13 @@
 # 🎮 Emoji Adventures
 
-An AI-powered storytelling game where you create branching narratives using emoji combinations. Built with GPT-5 and React.
+An AI-powered storytelling game where you create branching narratives using emoji combinations. Built with GPT-4o-mini and React.
+
+![Gameplay Screenshot](gameplay.png)
 
 ## 🌟 Features
 
 - **5 Genre Options**: Fantasy, Sci-Fi, Mystery, Horror, and Adventure
-- **AI-Powered Storytelling**: GPT-5 interprets your emoji choices and crafts unique narratives
+- **AI-Powered Storytelling**: GPT-4o-mini interprets your emoji choices and crafts unique narratives
 - **Branching Narratives**: Your emoji combinations lead to different story paths
 - **Creative Gameplay**: Same emoji sequence creates different stories each playthrough
 - **Dynamic Endings**: Stories can end early with failure states or reach natural conclusions
@@ -23,20 +25,20 @@ An AI-powered storytelling game where you create branching narratives using emoj
 
 ### Backend
 - **FastAPI**: High-performance async Python web framework
-- **OpenAI GPT-5**: Advanced AI for story generation
+- **OpenAI GPT-4o-mini**: Advanced AI for story generation via Responses API
 - **Pydantic**: Data validation and settings management
 
 ### Frontend
-- **React 18**: Modern UI library
-- **Vite**: Fast build tool
-- **emoji-picker-react**: Open-source emoji picker component
+- **React 18**: Modern UI library with 2-column responsive layout
+- **Vite**: Fast build tool with proxy configuration
+- **emoji-picker-react**: Always-visible emoji picker component
 - **Axios**: HTTP client for API calls
 
 ## 📦 Installation
 
 ### Prerequisites
 - Docker and Docker Compose
-- OpenAI API key with GPT-5 access
+- OpenAI API key
 
 ### Quick Start with Docker (Recommended)
 
@@ -97,19 +99,21 @@ npm run dev
 ## 🎮 Game Mechanics
 
 ### Emoji Interpretation
+- **Always Visible Picker**: Emoji picker stays open for quick selection
 - **Context Matters**: Same emoji means different things in different situations
 - **Order Matters**: 🔥⚔️ (fire then sword) vs ⚔️🔥 (sword then fire) can have different meanings
-- **Combinations**: Multiple emojis create complex actions (🏃💨🌲 = running quickly into forest)
+- **Combinations**: 2-4 emojis create complex actions (🏃💨🌲 = running quickly into forest)
 
 ### Story Progression
 - **Turns 1-10**: Setup, exploration, character establishment
 - **Turns 11-20**: Rising action, challenges, complications
 - **Turns 21-30**: Climax and resolution
 
-### Failure States
+### Failure States & Game Over
 - Character death from dangerous choices
 - Impossible situations with no recovery
 - Story contradictions that can't continue
+- **Improved UX**: Read final story before manually restarting
 
 ## 🏗️ Project Structure
 
@@ -120,8 +124,8 @@ emoji-adventures/
 │   │   ├── __init__.py
 │   │   ├── main.py              # FastAPI app & routes
 │   │   ├── models.py            # Pydantic models
-│   │   ├── story_engine.py      # AI story generation
-│   │   └── prompts.py           # GPT-5 prompts
+│   │   ├── story_engine.py      # AI story generation with Responses API
+│   │   └── prompts.py           # Optimized prompts for concise stories
 │   ├── requirements.txt
 │   └── Dockerfile
 ├── frontend/
@@ -168,8 +172,8 @@ Edit `backend/app/prompts.py` and `frontend/src/components/GenreSelector.jsx`
 ### Adjust Story Length
 Change `MAX_TURNS` in `backend/app/main.py`
 
-### Modify AI Creativity
-Adjust `temperature` in `backend/app/story_engine.py` (0.0-1.0)
+### Modify Story Length
+Adjust paragraph count and sentence limits in `backend/app/prompts.py`
 
 ## 🐛 Troubleshooting
 
@@ -183,9 +187,9 @@ Adjust `temperature` in `backend/app/story_engine.py` (0.0-1.0)
 - Check CORS settings in `backend/app/main.py`
 
 **Stories seem repetitive**
-- Increase temperature in story_engine.py
 - Try different emoji combinations
 - Select a different genre
+- Each playthrough generates unique narratives
 
 ## 📝 License
 
@@ -200,9 +204,16 @@ Contributions welcome! Ideas for improvement:
 - Achievement system
 - More genres
 
+## 🎯 Key Features
+
+- **2-Column Layout**: Story on left, controls on right - no scrolling needed
+- **Responsive Design**: Adapts to different screen sizes
+- **Concise Stories**: Optimized for quick, engaging gameplay
+- **Manual Restart**: Read the ending before starting a new adventure
+
 ## 🙏 Acknowledgments
 
-- OpenAI for GPT-5 API
+- OpenAI for GPT-4o-mini and Responses API
 - emoji-picker-react for the emoji selector
 - FastAPI and React communities
 
